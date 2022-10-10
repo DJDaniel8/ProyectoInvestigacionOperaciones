@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="ProyectoInvestigacionOperaciones.Views.DualView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProyectoInvestigacionOperaciones.Views"
+             mc:Ignorable="d" 
+             Visibility="{Binding ControlVisibility}"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel>
+            <Label Content="Dualidad Por Simplex" FontSize="20" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Cantidad de Variables:" FontSize="16"/>
+                <TextBox Height="28" Width="75" FontSize="16"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Cantidad de Restricciones:" FontSize="16"/>
+                <TextBox Height="28" Width="75" FontSize="16"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Button Height="28" Content="Generar Modelo" Width="150" HorizontalAlignment="Left"/>
+                <Label Content="Objetivo:" FontSize="16"/>
+                <ComboBox Margin=" 10 0 0 0" FontSize="16" Height="28" Width="120">
+                    <ComboBoxItem Content="Maximizacion" />
+                    <ComboBoxItem Content="Minimizacion" />
+                </ComboBox>
+            </StackPanel>
+            
+
+            <Label Content="Funcion Objetivo" FontSize="16" Margin="15 15 0 0"/>
+
+            <StackPanel Orientation="Horizontal" Margin="15 0">
+                <TextBox Height="28" FontSize="16" Width="75" Margin="5 0"/>
+                <TextBlock VerticalAlignment="Center">
+                    <Run FontSize="16">X</Run>
+                    <Run FontSize="12" BaselineAlignment="TextBottom" >1</Run>
+                </TextBlock>
+                <Label Content="+" FontSize="16"/>
+                <TextBox Height="28" FontSize="16" Width="75" Margin="5 0"/>
+                <TextBlock VerticalAlignment="Center">
+                    <Run FontSize="16">X</Run>
+                    <Run FontSize="12" BaselineAlignment="TextBottom" >2</Run>
+                </TextBlock>
+            </StackPanel>
+
+            <Label Content="Restriciones" FontSize="16" Margin="15 15 0 0"/>
+
+            <StackPanel Orientation="Horizontal" Margin="15 0">
+                <TextBox Height="28" FontSize="16" Width="75" Margin="5 0"/>
+                <TextBlock VerticalAlignment="Center">
+                    <Run FontSize="16">X</Run>
+                    <Run FontSize="12" BaselineAlignment="TextBottom" >1</Run>
+                </TextBlock>
+                <Label Content="+" FontSize="16"/>
+                <TextBox Height="28" FontSize="16" Width="75" Margin="5 0"/>
+                <TextBlock VerticalAlignment="Center">
+                    <Run FontSize="16">X</Run>
+                    <Run FontSize="12" BaselineAlignment="TextBottom" >2</Run>
+                </TextBlock>
+
+                <ComboBox Height="28" Width="50" FontSize="16" Margin="5 0">
+                    <ComboBoxItem Content="&lt;="/>
+                    <ComboBoxItem Content=">="/>
+                    <ComboBoxItem Content="="/>
+                </ComboBox>
+
+                <TextBox Height="28" FontSize="16" Width="75" Margin="5 0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="15 0">
+                <TextBox Height="28" FontSize="16" Width="75" Margin="5 0"/>
+                <TextBlock VerticalAlignment="Center">
+                    <Run FontSize="16">X</Run>
+                    <Run FontSize="12" BaselineAlignment="TextBottom" >1</Run>
+                </TextBlock>
+                <Label Content="+" FontSize="16"/>
+                <TextBox Height="28" FontSize="16" Width="75" Margin="5 0"/>
+                <TextBlock VerticalAlignment="Center">
+                    <Run FontSize="16">X</Run>
+                    <Run FontSize="12" BaselineAlignment="TextBottom" >2</Run>
+                </TextBlock>
+
+                <ComboBox Height="28" Width="50" FontSize="16" Margin="5 0">
+                    <ComboBoxItem Content="&lt;="/>
+                    <ComboBoxItem Content=">="/>
+                    <ComboBoxItem Content="="/>
+                </ComboBox>
+
+                <TextBox Height="28" FontSize="16" Width="75" Margin="5 0"/>
+            </StackPanel>
+
+            <Button Content="Calcular" Height="28" HorizontalAlignment="Left" FontSize="16" Margin="10"/>
+
+            <Label Content="La solucion optima es Z = 25.33" FontSize="16"/>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock VerticalAlignment="Center">
+                    <Run FontSize="16">X</Run>
+                    <Run FontSize="12" BaselineAlignment="TextBottom" >1</Run>
+                </TextBlock>
+                <TextBlock Text="=1.67, " FontSize="16"/>
+                <TextBlock VerticalAlignment="Center">
+                    <Run FontSize="16">X</Run>
+                    <Run FontSize="12" BaselineAlignment="TextBottom" >2</Run>
+                </TextBlock>
+                <TextBlock Text="=0.67, " FontSize="16"/>
+
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
